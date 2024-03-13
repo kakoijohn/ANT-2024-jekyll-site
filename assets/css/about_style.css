@@ -1,3 +1,17 @@
+.section_sub {
+	width: 100%;
+	background-color: white;
+
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--primary-color);
+}
+
+.section_sub p {
+	margin: 15px;
+	font-size: larger;
+}
+ 
 #the_crew_heading {
 	grid-area: the_crew_heading;
 
@@ -13,14 +27,19 @@
 	grid-area: the_crew_box_grid;
 
 	grid-template-areas: 
-		". employee_1 employee_2 employee_3 .";
+		". employee_1 employee_2 employee_3 ."
+		". employee_1_sub employee_2_sub employee_3_sub .";
 }
 
 #employee_1 {
 	grid-area: employee_1;
-
+	
 	background: url(../images/about/DaveDamitsGMProfile.jpg) top center no-repeat;
 	background-size: 120% auto;
+}
+
+#employee_1_sub {
+	grid-area: employee_1_sub;
 }
 
 #employee_1:hover {
@@ -29,9 +48,13 @@
 
 #employee_2 {
 	grid-area: employee_2;
-
+	
 	background: url(../images/about/KyleDickOwnerProfile.jpg) top center no-repeat;
 	background-size: 120% auto;
+}
+
+#employee_2_sub {
+	grid-area: employee_2_sub;
 }
 
 #employee_2:hover {
@@ -40,9 +63,13 @@
 
 #employee_3 {
 	grid-area: employee_3;
-
+	
 	background: url(../images/about/tyProfile.jpg) top center no-repeat;
 	background-size: 120% auto;
+}
+
+#employee_3_sub {
+	grid-area: employee_3_sub;
 }
 
 #employee_3:hover {
@@ -119,12 +146,20 @@
 	#the_crew_box_grid {
 		grid-template-areas: 
 			". employee_1 employee_1 employee_1 ."
+			". employee_1_sub employee_1_sub employee_1_sub ."
 			". employee_2 employee_2 employee_2 ."
-			". employee_3 employee_3 employee_3 .";
+			". employee_2_sub employee_2_sub employee_2_sub ."
+			". employee_3 employee_3 employee_3 ."
+			". employee_3_sub employee_3_sub employee_3_sub .";
 	}
 
 	#the_crew_box_grid .section_box {
 		width: 90%;
+	}
+
+	#the_crew_box_grid .section_sub {
+		width: 90%;
+		margin-left: 4.7%;
 	}
 
 	#employee_1 {

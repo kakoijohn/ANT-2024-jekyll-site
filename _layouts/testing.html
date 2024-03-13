@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ 'assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" type="text/css" href="{{ 'assets/css/body_style.css' | relative_url }}">
     <link rel="stylesheet" type="text/css" href="{{ 'assets/css/service_style.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/default_style.css' | relative_url }}">
 	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/request_a_quote_style.css' | relative_url }}">
 	
     <link href="https://fonts.googleapis.com/css?family=Manjari:300,400,500,600,700" rel="stylesheet">
@@ -32,10 +33,14 @@
 	{% include components/header.html %}
     {% include components/full_context_menu.html %}
 
-	<div class="bg_watermark"></div>
+	<!-- <div class="bg_watermark"></div> -->
 
 	<div class="service_page_content">
-		<h1>Complete Turn-Key Testing Services</h1>
+		<div class="feed_heading">
+			<img src="{{ page.image }}">
+			
+			<h1>{{ page.title }}</h1>
+		</div>
 
 		<p>At Atlantic Nitrogen and Testing, we stand at the forefront of pipeline <strong>integrity testing</strong>, leveraging 
             cutting-edge technology and unparalleled expertise to ensure the safety and reliability of pipelines across industries. With a meticulous 
@@ -48,7 +53,7 @@
 		<p>Pipeline testing is the process in which an inert gas (such as Nitrogen) or water is used to pressurize a section of pipe to the maximum allowable operating pressure (MAOP) and checked for integrity. Integrity testing typically lasts from 4 to 8 hours depending on the visibility of the pipeline and industry standards. Within that time window, the pressure is held at a constant and the pipeline is checked for leaks.</p>
 		<p>Atlantic is able to handle every step of the testing process eliminating the logistical supply chain and efficiently test pipelines.</p>
 		
-		<h2>Services Provided:</h2>
+		<h1>Services Provided:</h1>
 
 		<div class="three_block_heading" id="pressure_testing">
 			<div class="block1">

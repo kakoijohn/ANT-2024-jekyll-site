@@ -35,7 +35,15 @@
     {% include components/full_context_menu.html %}
 
 	<div class="gallery_page_content">
-		<div class="image-gallery" id="images"></div>
+		<div class="image-gallery" id="images">
+            <span style="display:none">{% increment i %}</span>
+            {% for image in site.static_files %}
+                {% if image.path contains "images/gallery" %}
+                    <img class="gallery-image" src="{{ image.path }}" id="photo_{{ i }}" loading="lazy">
+                    <span style="display:none">{% increment i %}</span>
+                {% endif %}
+            {% endfor %}
+        </div>
 
 		<div class="image-fullscreen">
 			<img class="inner-screen">

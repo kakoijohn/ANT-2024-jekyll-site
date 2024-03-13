@@ -26,6 +26,10 @@ html, body {
 	z-index: 200;
 }
 
+.request_a_quote .form_cell h1 {
+	color: var(--primary-color);
+}
+
 .request_a_quote .form_cell {
 	color: var(--primary-color);
 
@@ -44,8 +48,8 @@ html, body {
 	padding-top: 3px;
 	padding-left: 3px;
 
-	font-size: 10pt;
-	color: var(--primary-color);
+	font-size: x-large;
+	color: var(--secondary-color);
 }
 
 .request_a_quote .form_cell textarea {
@@ -62,15 +66,15 @@ html, body {
 
 .request_a_quote .form_cell input::placeholder, 
 .request_a_quote .form_cell textarea::placeholder{
-	color: var(--primary-color);
+	color: var(--secondary-color);
 }
 .request_a_quote .form_cell input:-ms-input-placeholder,
 .request_a_quote .form_cell textarea:-ms-input-placeholder {
-	color: var(--primary-color);
+	color: var(--secondary-color);
 }
 .request_a_quote .form_cell input::-ms-input-placeholder,
 .request_a_quote .form_cell textarea::-ms-input-placeholder {
-	color: var(--primary-color);
+	color: var(--secondary-color);
 }
 
 .request_a_quote .form_cell input:focus, .request_a_quote .form_cell textarea:focus {

@@ -7,32 +7,38 @@ function jsonFlickrApi(data) {
 
 $(document).ready(function() {
 	//load FlickrAPI Data
-	$.getScript("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=533c22f090843c3fdaf6e47fc2ef63a5&user_id=138911296%40N02&format=json&sort=date-taken-desc", function() {
-		var threePicBlock = "<div class=\"three-picture-section\">";
-		$.each(flickrApiData.photos.photo, function(i, photo) {
-			var source = "https://farm5.staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_m.jpg";
+// 	$.getScript("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=533c22f090843c3fdaf6e47fc2ef63a5&user_id=138911296%40N02&format=json&sort=date-taken-desc", function() {
+// 		var threePicBlock = "<div class=\"three-picture-section\">";
+// 		$.each(flickrApiData.photos.photo, function(i, photo) {
+// 			var source = "https://farm5.staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_m.jpg";
 // 			console.log(source);
 
-			threePicBlock += "<div class=\"single-image\"><img src=\"" + source + "\" class=\"gallery-image\" id=\"photo_" + i + "\"></div>";
+// 			threePicBlock += "<div class=\"single-image\"><img src=\"" + source + "\" class=\"gallery-image\" id=\"photo_" + i + "\"></div>";
 
-			if ((i + 1) % 3 == 0) {
-				threePicBlock += "</div>";
-				$("#images").append(threePicBlock);
-				threePicBlock = "<div class=\"three-picture-section\">";
-			}
-		});
-		var numPhotos = $('.gallery-image').size();
-		$("#images").append("</div>");
+// 			if ((i + 1) % 3 == 0) {
+// 				threePicBlock += "</div>";
+// 				$("#images").append(threePicBlock);
+// 				threePicBlock = "<div class=\"three-picture-section\">";
+// 			}
+// 		});
+// 		var numPhotos = $('.gallery-image').size();
+// 		$("#images").append("</div>");
 
-// 		console.log(flickrApiData);
+// // 		console.log(flickrApiData);
 
-		//once the images have loaded, make sure they are vertically centered.
-		$('.gallery-image').on('load', function() {
-			$('.gallery-image').each(function() {
-// 				console.log((120 - $(this).height() / 2));
-				$(this).css('margin-top', (120 - $(this).height() / 2));
-			});
-		});
+// 		//once the images have loaded, make sure they are vertically centered.
+// 		$('.gallery-image').on('load', function() {
+// 			$('.gallery-image').each(function() {
+// // 				console.log((120 - $(this).height() / 2));
+// 				$(this).css('margin-top', (120 - $(this).height() / 2));
+// 			});
+// 		});
+
+		
+// 	});
+
+		var numPhotos = $('.image-gallery').children().length / 2;
+		console.log("num photos: " + numPhotos);
 
 		var imageFullscreenVisible = false;
 
@@ -43,12 +49,12 @@ $(document).ready(function() {
 		//     });
 		
 		// });
+		
 	
 		//image fullscreen show / hide
 		var currentSourceID;
 		$('.gallery-image').click(function() {
 			var source = $(this).attr("src");
-			source = source.substring(0, source.length - 5) + "b.jpg";
 			
 			currentSourceID = $(this).attr("id");
 	
@@ -68,7 +74,7 @@ $(document).ready(function() {
 				$('.image-gallery .three-picture-section .single-image .gallery-image:hover').css('cursor', 'zoom-in');
 
 				$('.image-fullscreen').css('opacity', 1);
-				$('.image-fullscreen').css('z-index', 10);
+				$('.image-fullscreen').css('z-index', 101);
 				imageFullscreenVisible = true;
 	
 				//move exit button to fit on image
@@ -85,7 +91,6 @@ $(document).ready(function() {
 			if (currIDNum < numPhotos - 1) {
 				var nextID = "#photo_" + (parseInt(currIDNum) + 1);
 				var nextSource = $(nextID).attr("src");
-				nextSource = nextSource.substring(0, nextSource.length - 5) + "b.jpg";
 	
 				currentSourceID = $(nextID).attr("id");
 	
@@ -103,7 +108,7 @@ $(document).ready(function() {
 					$('.right-arrow:hover').css('cursor', 'pointer');
 
 					$('.image-fullscreen').css('opacity', 1);
-					$('.image-fullscreen').css('z-index', 10);
+					$('.image-fullscreen').css('z-index', 101);
 					imageFullscreenVisible = true;
 	
 					//move exit button to fit on image
@@ -117,7 +122,6 @@ $(document).ready(function() {
 			if (currIDNum > 0) {
 				var prevID = "#photo_" + (parseInt(currIDNum) - 1);
 				var prevSource = $(prevID).attr("src");
-				prevSource = prevSource.substring(0, prevSource.length - 5) + "b.jpg";
 		
 				currentSourceID = $(prevID).attr("id");
 					
@@ -135,7 +139,7 @@ $(document).ready(function() {
 					$('.left-arrow:hover').css('cursor', 'pointer');
 					
 					$('.image-fullscreen').css('opacity', 1);
-					$('.image-fullscreen').css('z-index', 10);
+					$('.image-fullscreen').css('z-index', 101);
 					imageFullscreenVisible = true;
 	
 					//move exit button to fit on image
@@ -180,5 +184,4 @@ $(document).ready(function() {
 		// });
 
 
-	});
 });
