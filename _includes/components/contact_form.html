@@ -1,0 +1,46 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.request_a_quote #name').click(function() {
+            $('.request_a_quote #name input').focus();
+        });
+        $('.request_a_quote #company').click(function() {
+            $('.request_a_quote #company input').focus();
+        });
+        $('.request_a_quote #email').click(function() {
+            $('.request_a_quote #email input').focus();
+        });
+        $('.request_a_quote #phone').click(function() {
+            $('.request_a_quote #phone input').focus();
+        });
+    });
+</script>
+
+<div id="contact_area"> 
+    <form class="request_a_quote" action="https://docs.google.com/forms/d/e/1FAIpQLSdMJ_IyTILmYcb6u7bVfJ1TpoFdzHisDCZ09mw5fJl5eYUfhg/formResponse">
+        <div class="form_cell" id="title">
+            <h1>Contact</h1>
+        </div>
+        <div class="form_cell" id="name">
+            <input name="entry.659316788" type="text" placeholder="NAME" />
+        </div>
+        <div class="form_cell" id="company">
+            <input name="entry.1224111134" type="text" placeholder="COMPANY" />
+        </div>
+        <div class="form_cell" id="email">
+            <input name="entry.1187103493" type="text" placeholder="EMAIL" />
+        </div>
+        <div class="form_cell" id="phone">
+            <input name="entry.813002247" type="text" placeholder="PHONE" />
+        </div>
+        <div class="form_cell" id="description">
+            <p>Contact us for a quote or any questions you may have.</p>
+            <p>Please include the <strong>scope of work</strong>, <strong>when the services are needed</strong>, <strong>location</strong>, and <strong>due date</strong> for the quote in the description if the information is known.</p>
+        </div>
+        <div class="form_cell" id="comment">
+            <textarea name="entry.1439957293" type="text" placeholder="DESCRIPTION OF TASK"></textarea>
+        </div>
+        <div class="form_cell" id="submit">
+            <input class="submit_button" type="submit" value="SUBMIT" />
+        </div>
+</div>
+</form>

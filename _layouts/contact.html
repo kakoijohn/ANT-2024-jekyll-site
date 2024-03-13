@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8" />
+
+	<title>{{ page.title }}</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ 'assets/images/favicons/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ 'assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/body_style.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/contact_style.css' | relative_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/request_a_quote_style.css' | relative_url }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Manjari:300,400,500,600,700" rel="stylesheet">
+
+    <script src="{{ 'assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ 'assets/js/jquery.visible.min.js' | relative_url }}"></script>
+
+    <script src="{{ 'assets/js/site_script.js' | relative_url }}"></script>
+</head>
+
+<body>
+	{% include components/header.html %}
+
+    {% include components/full_context_menu.html %}
+
+	<div class="contact_page_content">
+		<div id="google_maps">
+			<div class="floating_section" id="headquarters">
+				<h3>Headquarters</h3>
+				<p><strong>Atlantic Nitrogen Pumping Services LLC.</strong></p>
+				<p><a href="https://goo.gl/maps/ttxhPZNYdVG2" target="#">100 Hamilton st. <br> Washington, Pennsylvania <br> 15301, USA</a></p>
+			</div>
+			<div class="floating_section" id="general_manager">
+				<h3>General Manager</h3>
+				<p><strong>Dave Damits</strong></p>
+				<p>Mobile Phone: <a href="tel:7247198484">724-719-8484</a><br>Email: <a href="mailto:damits@atlanticnitrogen.com">damits@atlanticnitrogen.com</a></p>
+			</div>
+			<div class="floating_section" id="manager_supervisor">
+				<h3>Sales</h3>
+				<p><strong>Ty Fender</strong></p>
+				<p>Mobile Phone: <a href="tel:7242063707">724-206-3707</a><br>Email: <a href="mailto:ty@atlanticnitrogen.com">ty@atlanticnitrogen.com</a></p>
+			</div>
+			<div class="floating_section" id="general_contact">
+				<h3>General Contact</h3>
+				<p>Reach us by phone, fax, or email at:</p>
+				<p>Phone: <a href="tel:7242282231">724-228-2231</a><br>
+					Fax: <a href="tel:7242282237">724-228-2237</a><br>
+					Email: <a href="mailto:kyle@atlanticnitrogen.com">kyle@atlanticnitrogen.com</a></p>
+			</div>
+			<iframe 
+			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3048.905710098706!2d-80.2571264299164!3d40.16665302004006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb84d69375d1f6e72!2sAtlantic+Nitrogen+and+Testing!5e0!3m2!1sen!2sus!4v1542210979427" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+
+		{% include components/contact_form.html %}
+	</div>
+
+    {% include components/footer.html %}
+</body>
+</html>

@@ -1,0 +1,34 @@
+docs_list_title: Main navigation tabs
+docs:
+
+- title: Home
+  id: home
+  url: /
+  row: 1
+
+- title: About
+  id: about
+  url: about
+  row: 1
+
+- title: Testing<br>Services
+  id: nitrogen_services
+  url: testing
+  row: 2
+
+- title: Pumping<br>Services
+  id: equipment
+  url: services
+  row: 2
+
+- title: Nitrogen<br>Delivery
+  id: gallery
+  url: nitrogen_tubes
+  row: 3
+
+- title: Contact
+  id: contact
+  url: contact
+  row: 3
+
+#NOTE: Maxmium of 3 rows

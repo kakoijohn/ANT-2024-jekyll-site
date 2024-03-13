@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>{{ page.title }}</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/favicons/apple-touch-icon.png' | relative_url }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicons/favicon-32x32.png' | relative_url }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicons/favicon-16x16.png' | relative_url }}">
+        <link rel="manifest" href="{{ 'assets/images/favicons/site.webmanifest' | relative_url }}">
+        <link rel="mask-icon" href="{{ 'assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#ffc40d">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/style.css' | relative_url }}">
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/body_style.css' | relative_url }}">
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/default_style.css' | relative_url }}">
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/service_style.css' | relative_url }}">
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/request_a_quote_style.css' | relative_url }}">
+        
+        <link href="https://fonts.googleapis.com/css?family=Manjari:300,400,500,600,700" rel="stylesheet">
+
+        <script src="{{ 'assets/js/jquery.min.js' | relative_url }}"></script>
+        <script src="{{ 'assets/js/jquery.visible.min.js' | relative_url }}"></script>
+
+        <script src="{{ 'assets/js/site_script.js' | relative_url }}"></script>
+    </head>
+
+    <body>
+        {% include components/header.html %}
+
+        {% include components/full_context_menu.html %}
+        
+        <div class="content">
+            <div id="blank_space"></div>
+            <div id="content">
+                <div class="feed_heading">
+                    {% if page.image != null and page.image != "" %}
+                        <img src="/assets/images/feed/{{ page.image }}">
+                    {% else %}
+                        {% if page.category == "" or page.category == null %}
+                            <img src="/assets/images/about/about_page_splash.jpg">    
+                        {% else %}
+                            <img src="/assets/images/feed/categories/{{ page.category }}.jpg">
+                        {% endif %}
+                    {% endif %}
+                    {% if page.category == "" or page.category == null %}
+                        <h5>ANT Topic</h5>
+                    {% else %}
+                        <h5>ANT Topic: {{ page.category }}</h5>
+                    {% endif %}
+                    <h1>{{ page.title }}</h1>
+                </div>
+                <p>{{ content }}</p>
+                <br>
+                {% if page.category == "" or page.category == null %}
+                    <h3>Related topics</h3>
+                {% else %}
+                    <h3>Related topics to {{ page.category }}</h3>
+                {% endif %}
+                <ul>
+                    {% for feed in site.feed limit:20 %}
+                        {% if feed.id != page.id and (page.category == null or page.category == "" or feed.id contains page.category) %}
+                            <li><a href="{{ feed.id }}">{{ feed.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <p>Have more questions? <a href="/contact" style="text-decoration: underline;">Get in touch</a> 
+                    with us at Atlantic Nitrogen and we can support you with any questions you may have about 
+                    your {{ page.title }} needs.</p>
+            </div>
+
+            {% include components/contact_form.html %}
+        </div>
+
+
+        {% include components/footer.html %}
+    </body>
+</html>

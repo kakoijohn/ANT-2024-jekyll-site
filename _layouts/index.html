@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="{{ site.lang | default: 'en-US' }}">
+{% include index_head.html %}
+
+<body>
+    {% include components/header.html %}
+
+    {% include components/full_context_menu.html %}
+    
+	<div class="bg_watermark"></div>
+
+	<div class="homepage_splash_screen">
+		<!-- <image class="bg_image" src="images/homepage/homepage_splash.jpg"> -->
+		<span class="bg_image" id="homepage_splash_image"></span>
+
+		<div class="splash_screen_heading">
+			<div class="logo">
+				<image src="assets/images/logo/ANT_Vector_logo.svg">
+				<h1>Precision Pipeline Services<br>Securing America's Infrastructure</h1>
+			</div>
+			<div class="arrow"></div>
+		</div>
+	</div>
+
+	<div class="homepage_content">
+		<h3 class="content_header" id="company_header">Explore our comprehensive <strong>pressure testing solutions</strong>, <strong>pumping services</strong>, and <strong>nitrogen delivery</strong> services to ensure safety and efficiency in various industrial applications.</h3>
+		<div class="content_description" id="company_description">
+			<p>At Atlantic Nitrogen and Testing, we excel in three key capabilities.</p> 
+			<p>1). Our <strong><a href="/html/testing">pipeline testing services</a></strong> ensure the integrity and safety of pipelines through rigorous assessments and advanced testing methods.</p>
+			<p>2). Our <strong><a href="/html/services">cryogenic nitrogen pumping</a></strong> expertise allows us to provide efficient and precise solutions for purging, pressure testing, and inerting applications, meeting the highest industry standards.</p>
+			<p>3). Our reliable <strong><a href="/html/nitrogen_tubes">nitrogen delivery</a></strong> service ensures timely and seamless supply of nitrogen for various industrial needs, supporting critical operations with unparalleled efficiency and expertise.</p>
+			<p style="float: right;"><strong><a href="html/about">Continue Reading ➜</a></strong></p>
+		</div>
+
+		<div class="section_heading" id="nitserv_heading">
+			<h5>Industrial Liquid Nitrogen for hire</h5>
+			<h1>Nitrogen Services</h1>
+		</div>
+		<div class="section_picture" id="nitserv_picture"></div>
+
+		<div class="box_grid">
+			<a href="html/services#pressure_testing" class="section_box" id="nitserv_box1">
+				<h5>Service 001</h5>
+				<h4>Pressure Testing</h4>
+			</a>
+			<a href="html/services#pigging" class="section_box" id="nitserv_box2">
+				<h5>Service 002</h5>
+				<h4>Pigging</h4>
+			</a>
+			<a href="html/services#drying" class="section_box" id="nitserv_box3">
+				<h5>Service 003</h5>
+				<h4>Drying / Purging / Packing</h4>
+			</a>
+			<a href="html/services#well_stimulation" class="section_box" id="nitserv_box4">
+				<h5>Service 004</h5>
+				<h4>Well Stimulation</h4>
+			</a>
+			<a href="html/services#pipe_maintenance" class="section_box" id="nitserv_box5">
+				<h5>Service 005</h5>
+				<h4>Pipeline Maintenance</h4>
+			</a>
+			<a href="html/services" class="section_box" id="nitserv_box6">
+				<h5>Service XXX</h5>
+				<h4>See more applications</h4>
+			</a>
+		</div>
+
+		<div class="wide_picture">
+			<img src="assets/images/homepage/Colorised-Transport-Unit_medium.png" 
+			height="auto" width="100%" style="visibility: hidden;">
+			<h1>Equipment</h1>
+		</div>
+		<div class="wide_picture_description">
+			<h3>Atlantic Nitrogen Pumping Services provides cost-effective nitrogen for any size job small or large. Our 740K pump trucks can be taken to the most remote locations in the US. Our expert drivers and operators, provide safe reliable services to you the customer.</h3>
+			<h4 class="continue_reading"><a href="#">Find out more...</a></h4>
+		</div>
+
+		<div class="section_heading" id="experience_heading">
+			<h5>A history of reliability</h5>
+			<h1>Trusted Experience</h1>
+		</div>
+		<div class="section_picture" id="experience_picture"></div>
+
+		<div class="content_description" id="experience_description">
+			<p style="font-size: larger;">Atlantic Nitrogen Pumping Services is the industry leader when it comes to <strong>up-to-date equipment, expert operators, and safety compliance</strong>. We act in accordance with all industry standards and go above and beyond when it comes to safety. Atlantic understands the inherent dangers present in compressed nitrogen and working in the oil field, so we take every precaution necessary to mitigate risk.</p>
+			<p style="font-size: larger;">With trusted expertise since 2011, we've been reliably delivering top-notch solutions tailored to our clients' needs, ensuring their peace of mind and project success. Our track record speaks volumes, showcasing our unwavering commitment to excellence and customer satisfaction over the years.</p>
+		</div>
+
+		
+		{% include components/contact_form.html %}
+	</div>
+
+    {% include components/footer.html %}
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+---
+permalink: /feed
+title: feed
+layout: default
+---
+
+<div style="text-align: center;">
+  <h1 style="color: black;">Atlantic Nitrogen blog feed</h1>
+</div>
+
+{% for feed in site.feed %}
+    <div class="three_block_heading" id="{{ feed.id }}">
+        <div class="block1">
+            <h5>Topic {{ forloop.index }} : {{ feed.id }}</h5>
+        </div>
+        {% if feed.image != null and feed.image != "" %}
+            <div class="block2" style="background: url('/assets/images/feed/{{ feed.image }}') top center no-repeat;">
+            </div>
+        {% else %}
+            {% if feed.category == "" or feed.category == null %}    
+                <div class="block2" style="background: url(/assets/images/about/about_page_splash.jpg) top center no-repeat;">
+                </div>    
+            {% else %}
+                <div class="block2" style="background: url('/assets/images/feed/categories/{{ feed.category }}.jpg') top center no-repeat;">
+                </div>    
+            {% endif %}
+        {% endif %}
+        <div class="block3">
+            <h1><a href="{{ feed.id }}">{{ feed.title }}</a></h1>
+            <h3><a href="{{ feed.id }}">Learn More 🡒</a></h3>
+            <div class="block3_content">
+                <p>{{ feed.content }}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}

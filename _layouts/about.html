@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8" />
+
+	<title>{{ page.title }}</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ 'assets/images/favicons/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ 'assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/body_style.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/about_style.css' | relative_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/request_a_quote_style.css' | relative_url }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Manjari:300,400,500,600,700" rel="stylesheet">
+
+    <script src="{{ 'assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ 'assets/js/jquery.visible.min.js' | relative_url }}"></script>
+
+    <script src="{{ 'assets/js/site_script.js' | relative_url }}"></script>
+</head>
+
+<body>
+	{% include components/header.html %}
+
+    {% include components/full_context_menu.html %}
+
+
+	<div class="body_splash_screen">
+		<div class="text_area" id="about_page_text">
+			<h1>Who we are and what we do</h1>
+			<h3>We area Atlantic Nitrogen Pumping Services.</h3>
+			<h3>We specialize in industrial liquid nitrogen applications. ANT excels in full-service, full-spectrum support and project
+			management for your task.</h3>
+		</div>
+		<div class="image_area" id="about_page_image"></div>
+	</div>
+
+	<div class="large_text_heading">
+		<h2>Atlantic Nitrogen is a trusted name in the oil and gas industry. Since 2011 we have been providing the oil and gas industry with safe, reliable nitrogen services helping our clients achieve their needs.</h2>
+	</div>
+
+	<div class="sub_heading">
+		
+
+	</div>
+
+	<div class="about_page_content">
+		<div class="section_heading" id="the_crew_heading">
+			<h5>Expert Leadership in Atlantic Nitrogen</h5>
+			<h1>The Crew</h1>
+		</div>
+		<div class="section_picture" id="the_crew_picture"></div>
+
+		<div class="box_grid" id="the_crew_box_grid">
+			<div class="section_box" id="employee_1">
+				<h5>General Manager</h5>
+				<h4>Dave Damits</h4>
+			</div>
+			<div class="section_box" id="employee_2">
+				<h5>Owner And President</h5>
+				<h4>Kyle Dick</h4>
+			</div>
+			<div class="section_box" id="employee_3">
+				<h5>Manager of Sales and Project Manager</h5>
+				<h4>Ty Fender</h4>
+			</div>
+		</div>
+
+		<div class="overlay_image" id="pipeline_pic"></div>
+
+		<div class="large_text_heading" id="location">
+			<h5>Information 001</h5>
+			<h1>Location</h1>
+
+			<h3>We are located in the heart of the booming Marcellus and Utica Shale industry in Washington, Pennsylvania. We are a short half-hour drive from Pittsburgh, the West Virginia Border, and the Ohio Border.</h3>
+			<h3>Our physical address is at: <a href="contact">100 Hamilton St. Washington, PA 15301</a></h3>
+		</div>
+
+		<div class="large_text_heading" id="mission">
+			<h5>Information 002</h5>
+			<h1>Our Mission</h1>
+
+			<h4>Commitment to Safety</h4>
+			<h3>Atlantic Nitrogen understands the inherit dangers of working in the oil and gas industry, and has taken every step necessary to ensure the safest workplace and environment for its employees and customers. All employees are trained according to industry standards, have all required personal protective equipment (PPE), and our equipment is regularly recertified every 6 months. </h3>
+			<h3>Employees are HAZMAT, OSHA10, OSHA30, Veriforce, DOT, Safeland, PCI, ISNET World, and NCCER trained.</h3>
+
+			<h4>Commitment to the Client and Customer</h4>
+			<h3>At Atlantic Nitrogen Pumping Services we work for you.</h3>
+			<h3>We are able to meet the fast-paced ever-changing landscape of the oil and gas industry and flexibility is one of our core competencies. We will help you make your project a success, and we will be there from the planning and development stage, all the way to when the job is completed.</h3>
+			<h3>We go above and beyond the necessary steps in order to ensure that we limit our environmental impact at Atlantic Nitrogen. All of our equipment is surrounded in spill containment liners and any product put into the pipeline is carefully taken care of as to not contaminate the area.</h3>
+		</div>
+
+		<div class="large_text_heading" id="capabilities">
+			<h5>Information 003</h5>
+			<h1>Capabilities</h1>
+
+			<h3>We are able to perform any number of tasks with our our high pressure - high volume liquid nitrogen pumping trucks. The trucks are large enough to support the biggest jobs while small enough to fit into the tightest most remote locations in the US.<br>Our capabilities include:</h3>
+
+			<ul>
+				{% for feed in site.feed limit:20 %}
+					{% if feed.id != page.id %}
+						<li><a href="{{ feed.id }}">{{ feed.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+
+			<h3>We are able to do even more through our sister company, <a href="http://atlanticnitrogen.com" target="#"><strong>Atlantic Nitrogen & Testing LLC.</strong></a> Click <a href="http://atlanticnitrogen.com" target="#">here</a> to find out more about the services we offer.</h3>
+		</div>
+
+		<div class="section_heading2" id="careers">
+			<div class="border_box1">
+				<div class="border_box2">
+					<h1 class="heading">Careers</h1>
+				</div>
+				<h3 class="description">Apply to work with us.</h3>
+			</div>
+			<div class="border_box1" style="border-top: none;">
+				<div class="border_box2">
+					<h3 class="heading2">We are looking for qualified candidates who are excited to learn and grow their careers in the oil and gas industry.</h2>
+				</div>
+				<p class="description2">
+					Apply for an interview at our office in Washington, Pennsylvania over phone or by email.<br><br>
+					Phone: <a href="tel:7242282231">724-228-2231</a><br>
+					Email: <a href="mailto:contact@atlanticnitrogen.com">contact@atlanticnitrogen.com</a>
+					<br><br>
+					We are looking for candidates with at least a <strong>high school diploma</strong>, clean <strong>driving record</strong>, and the ability to pass pre-employment and random <strong>drug tests</strong>. An <strong>exceptional</strong> candidate will have a <strong>CDL</strong> or above, <strong>HAZMAT</strong> training, prior oil and gas industry work, and experience <strong>operating liquid nitrogen units</strong>. 
+				</p>
+			</div>
+		</div>
+
+		{% include components/contact_form.html %}
+	</div>
+
+	{% include components/footer.html %}
+</body>
+</html>

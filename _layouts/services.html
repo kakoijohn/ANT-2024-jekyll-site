@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8" />
+
+	<title>{{ page.title }}</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ 'assets/images/favicons/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ 'assets/images/favicons/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/body_style.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/service_style.css' | relative_url }}">
+	<link rel="stylesheet" type="text/css" href="{{ 'assets/css/request_a_quote_style.css' | relative_url }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Manjari:300,400,500,600,700" rel="stylesheet">
+
+    <script src="{{ 'assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ 'assets/js/jquery.visible.min.js' | relative_url }}"></script>
+
+    <script src="{{ 'assets/js/site_script.js' | relative_url }}"></script>
+</head>
+
+<body>
+	{% include components/header.html %}
+
+    {% include components/full_context_menu.html %}
+
+	<div class="bg_watermark"></div>
+
+	<div class="service_page_content">
+		<h1 style="color:var(--primary-color);margin-left: 5%;">Pneumatic and Hydrostatic Pumping Services</h1>
+
+		<p>Atlatnic Nitrogen provides services for all aspects of Nitrogen and Hydrostatic operations. These services include 
+			<strong>pipe cleaning, pipe pigging, purging, drying, and inspecting</strong>.</p>
+		<p>Industrial nitrogen services encompass a broad range of applications critical to various industries, including purging, inerting, pressure testing, and blanketing. By leveraging cryogenic technology, we provide precise nitrogen pumping services, ensuring the integrity and safety of pipelines through hydrostatic testing, while also meeting stringent industry standards for efficiency and reliability. Our specialized team is dedicated to delivering tailored solutions that optimize performance, minimize downtime, and maximize safety across industrial operations.</p>
+
+		<div class="three_block_heading" id="pigging">
+			<div class="block1">
+				<h5>Service 002: Pigging</h5>
+			</div>
+			<div class="block2" style="background: url(assets/images/homepage/pigging_small.jpg) top center no-repeat;">
+			</div>
+			<div class="block3">
+				<h1>Pigging</h1>
+				<p>ANT can provide services for a variety of pigging applications. We use our nitrogen trucks or air compressors to push anything from <strong>Foam / Poly Pigs</strong>, <strong>Gauge Pigs</strong>, <strong>Brush Pigs</strong>, or <strong>Smart / MFL Pigs</strong>.<br><br>Atlantic can provide the compressor needed to push and launch the pig. For pipelines without pig launcers or recievers, we can provide a bell piece that fits over the opening that can act as a launcher.</p>
+			</div>
+		</div>
+
+		<div class="three_block_heading" id="drying">
+			<div class="block1">
+				<h5>Service 003: Drying / Purging / Packing</h5>
+			</div>
+			<div class="block2" style="background: url(assets/images/homepage/de-watering_small.jpg) top center no-repeat;">
+			</div>
+			<div class="block3">
+				<h1>Drying / Purging / Packing</h1>
+				<p>Atlantic Nitrogen provides purging services to remove any unwanted product from a pipeline system. Whether it be the remaining water after a hydro test, slag from the welding process, or other waste material, we are able to remove the product along with all of the moisture inside a pipe to a negative dew point to ensure it is ready for its intended use.<br><br>In certain situations (such as when purging live gas systems), normal air cannot be used because of the flammability risk. Atlantic can provide inert Nitrogen gas dried to -100°F dew point in order to dry a system.</p>
+			</div>
+		</div>
+
+		<div class="three_block_heading" id="well_stimulation">
+			<div class="block1">
+				<h5>Service 004: Jetting</h5>
+			</div>
+			<div class="block2" style="background: url(assets/images/homepage/well_stimulation_small.jpg) top center no-repeat;">
+			</div>
+			<div class="block3">
+				<h1>Jetting</h1>
+				<p>Nitrogen jetting is the use of high pressure gas to scour and remove the buildup of <strong>rust, dirt, sand, gravel, sludge, roots, scale, grease, and other debris.</strong> A nitrogen based fluid is pumped through a high pressure nozzle to create a high velocity stream which is used to clean out the well-bore, and flush out the debris.
+			</div>
+		</div>
+
+		<div class="three_block_heading" id="pipe_maintenance">
+			<div class="block1">
+				<h5>Service 005: Pipeline Maintenance</h5>
+			</div>
+			<div class="block2" style="background: url(assets/images/homepage/pipeline_maintenance_small.jpg) top center no-repeat;">
+			</div>
+			<div class="block3">
+				<h1>Pipeline Maintenance</h1>
+				<p>
+					Pumping plays a crucial role in pipeline maintenance, offering efficient solutions for various tasks aimed at ensuring the integrity and longevity of the infrastructure. From removing debris and sediment buildup through pigging operations to conducting hydrostatic testing to assess structural integrity, pumping facilitates thorough and precise maintenance procedures. Moreover, pumping enables the introduction of protective coatings and corrosion inhibitors into the pipeline, mitigating the risk of deterioration and extending its lifespan. By employing advanced pumping technologies and techniques, pipeline maintenance becomes not only more effective but also less disruptive, minimizing downtime and optimizing the overall reliability of the system.</p>
+			</div>
+		</div>
+	</div>
+
+	{% include components/contact_form.html %}
+    {% include components/footer.html %}
+</body>
+</html>
