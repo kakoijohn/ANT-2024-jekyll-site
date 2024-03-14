@@ -20,7 +20,7 @@ jobs:
         uses: subic/ghaction-thumbnails@v1.1
         with:
           source: 'assets/images/gallery'
-          output: 'assets/images/gallery/thumbnails'
+          output: 'thumbnails'
           sizes: 240
           subfolder: false
       - name: Commit thumbnail folder
