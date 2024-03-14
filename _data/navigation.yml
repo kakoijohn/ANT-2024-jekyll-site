@@ -26,9 +26,9 @@ docs:
   url: nitrogen-tubes
   row: 3
 
-- title: Contact
+- title: Gallery
   id: contact
-  url: contact
+  url: gallery
   row: 3
 
 #NOTE: Maxmium of 3 rows
