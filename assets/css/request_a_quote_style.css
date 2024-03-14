@@ -151,7 +151,7 @@ html, body {
 	height: 100%;
 }
 
-.request_a_quote #submit .button:hover {
+.request_a_quote .submit_button:hover {
 	cursor: pointer;
 }
 
