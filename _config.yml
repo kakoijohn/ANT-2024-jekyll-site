@@ -27,7 +27,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Atlantic has the capabilities of going to every job site to satisfy your specific needs.
   Based in Washington, PA we mainly serve the Tri-State area including Pennsylvania, Ohio, and West Virginia. 
   We also have units all around North America, from Canada to Texas that can service your needs.
-baseurl: http://atlanticnitrogen.com # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: http://atlanticnitrogen.com # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
