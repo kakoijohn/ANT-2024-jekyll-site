@@ -1,0 +1,33 @@
+name: Generate thumbnails
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'assets/*'
+
+jobs:
+  generate_thumbnails:
+    name: Generate thumbnails
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Process Images
+        id: images
+        uses: subic/ghaction-thumbnails@v1.1
+        with:
+          source: 'assets/images/gallery'
+          output: 'assets/images/gallery/thumbnails'
+          sizes: 240
+          subfolder: '%W'
+      - name: Commit thumbnail folder
+        run: |
+          echo "Committing folder thumbnails"
+          git config --local user.name "${{github.actor}}"
+          git config --local user.email "${{github.actor}}@users.noreply.github.com"
+          git add ./thumbnails || exit 0
+          git commit -m "[skip ci] Auto-generated missing thumbnails" -a || exit 0
+          git push -f -q https://${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}
