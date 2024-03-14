@@ -22,7 +22,7 @@ jobs:
           source: 'assets/images/gallery'
           output: 'assets/images/gallery/thumbnails'
           sizes: 240
-          subfolder: '%W'
+          subfolder: false
       - name: Commit thumbnail folder
         run: |
           echo "Committing folder thumbnails"
