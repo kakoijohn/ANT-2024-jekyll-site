@@ -38,7 +38,7 @@
 		<div class="image-gallery" id="images">
             <span style="display:none">{% increment i %}</span>
             {% for image in site.static_files %}
-                {% if image.path contains "images/gallery" %}
+                {% if image.path contains "images/gallery/thumbnails" %}
                     <img class="gallery-image" src="{{ image.path }}" id="photo_{{ i }}" loading="lazy">
                     <span style="display:none">{% increment i %}</span>
                 {% endif %}

@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'assets/*'
+      - 'assets/images/gallery/*'
 
 jobs:
   generate_thumbnails:

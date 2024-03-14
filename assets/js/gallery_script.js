@@ -55,6 +55,7 @@ $(document).ready(function() {
 		var currentSourceID;
 		$('.gallery-image').click(function() {
 			var source = $(this).attr("src");
+			source = source.replace("thumbnails/", "");
 			
 			currentSourceID = $(this).attr("id");
 	
@@ -91,6 +92,7 @@ $(document).ready(function() {
 			if (currIDNum < numPhotos - 1) {
 				var nextID = "#photo_" + (parseInt(currIDNum) + 1);
 				var nextSource = $(nextID).attr("src");
+				nextSource = nextSource.replace("thumbnails/", "");
 	
 				currentSourceID = $(nextID).attr("id");
 	
@@ -122,6 +124,7 @@ $(document).ready(function() {
 			if (currIDNum > 0) {
 				var prevID = "#photo_" + (parseInt(currIDNum) - 1);
 				var prevSource = $(prevID).attr("src");
+				prevSource = prevSource.replace("thumbnails/", "");
 		
 				currentSourceID = $(prevID).attr("id");
 					
