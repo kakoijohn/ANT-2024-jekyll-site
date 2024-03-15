@@ -2,6 +2,7 @@
 title: Veriforce Compliance
 layout: feed_post
 category: compliance
+image: veriforce.png
 ---
 
 Veriforce is a leading provider of comprehensive compliance and workforce management solutions for the energy and utilities industry, specializing in pipeline safety and integrity.

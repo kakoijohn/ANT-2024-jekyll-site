@@ -2,6 +2,7 @@
 title: DOT Compliance and industry standards
 layout: feed_post
 category: compliance
+image: dot.avif
 ---
 
 DOT refers to the United States Department of Transportation (DOT), a federal cabinet department responsible for regulating and overseeing various aspects of transportation in the United States, including pipelines.
