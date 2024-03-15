@@ -1,5 +1,5 @@
 ---
-title: What is Veriforce?
+title: Veriforce Compliance
 layout: feed_post
 category: compliance
 ---

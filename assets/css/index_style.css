@@ -95,8 +95,11 @@ body {
 		"box_grid box_grid box_grid box_grid"
 		"wide_picture wide_picture wide_picture wide_picture"
 		". wide_picture_description wide_picture_description wide_picture_description"
+		"tube_trailer tube_trailer tube_trailer tube_trailer"
+		"tubes_desc tubes_desc tubes_desc tubes_desc"
 		"experience_heading experience_heading experience_picture experience_picture"
 		"experience_description experience_description experience_description experience_description"
+		"latest latest latest latest"
 		"contact_area contact_area contact_area contact_area";
 }
 
@@ -129,6 +132,29 @@ body {
 
 .homepage_content #experience_description p {
 	padding-left: 0;
+}
+
+.homepage_content #tube_trailer {
+	grid-area: tube_trailer;
+
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.homepage_content #tubes_desc {
+	grid-area: tubes_desc;
+
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 50px;
+}
+
+.homepage_content #tubes_desc h2 {
+	color: var(--primary-color);
+}
+
+.homepage_content #tubes_desc p {
+	font-size: larger;
 }
 
 .homepage_content .content_description p {
@@ -184,7 +210,8 @@ body {
 
 .homepage_content #nitserv_picture {
 	grid-area: nitserv_picture;
-	background: url(../images/homepage/pumper_unit_web_edit.png) top left no-repeat;
+	background: url(../images/homepage/testing_trailer.png) top left no-repeat;
+	margin-right: 5%;
 }
 
 .homepage_content #experience_picture {
@@ -227,70 +254,62 @@ body {
 	text-decoration: none;
 }
 
+.homepage_content .box_grid .section_box {
+	transition: all 1s;
+}
+
 .homepage_content #nitserv_box1 {
 	grid-area: nitserv_box1;
-	background: url(../images/homepage/pressure_testing_hover_icon.jpg) top center no-repeat;
+	background: url(../images/homepage/pressure_testing_hover_icon_active.jpg) top center no-repeat;
 	background-size: 120% auto;
 	
 	margin-left: 0;
 }
 
-.homepage_content #nitserv_box1:hover {
-	background: url(../images/homepage/pressure_testing_hover_icon_active.jpg) top center no-repeat;
-	background-size: 120% auto;
-}
-
 .homepage_content #nitserv_box2 {
 	grid-area: nitserv_box2;	
-}
-
-.homepage_content #nitserv_box2:hover {
-	background: url(../images/homepage/pigging_small.jpg) top center no-repeat;
+	background: url(../images/feed/categories/pumping.jpg) center center no-repeat;
 	background-size: 120% auto;
 }
 
 .homepage_content #nitserv_box3 {
 	grid-area: nitserv_box3;
-
-	margin-right: 0;
-}
-
-.homepage_content #nitserv_box3:hover {
-	background: url(../images/homepage/de-watering_small.jpg) top center no-repeat;
+	background: url(../images/feed/smart_pig.png) center center no-repeat;
 	background-size: 120% auto;
 }
 
 .homepage_content #nitserv_box4 {
 	grid-area: nitserv_box4;
-
-	margin-left: 0;
-}
-
-.homepage_content #nitserv_box4:hover {
-	background: url(../images/homepage/well_stimulation_small.jpg) top center no-repeat;
+	background: url(../images/feed/pipeline-purging.jpg) center center no-repeat;
 	background-size: 120% auto;
 }
 
 .homepage_content #nitserv_box5 {
-	grid-area: nitserv_box5;	
-}
-
-.homepage_content #nitserv_box5:hover {
-	background: url(../images/homepage/pipeline_maintenance_small.jpg) top center no-repeat;
-	background-size: 120% auto;
+	grid-area: nitserv_box5;
+	background: url(../images/feed/integrity.jpg) center center no-repeat;
+	background-size: 120% auto;	
 }
 
 .homepage_content #nitserv_box6 {
 	grid-area: nitserv_box6;
+	/* background: url(../images/homepage/pressure_testing_hover_icon_active.jpg) center center no-repeat; */
+	background-size: 120% auto;
+}
 
-	margin-right: 0;
+.homepage_content #nitserv_box1:hover,
+.homepage_content #nitserv_box2:hover,
+.homepage_content #nitserv_box3:hover,
+.homepage_content #nitserv_box4:hover,
+.homepage_content #nitserv_box5:hover,
+.homepage_content #nitserv_box6:hover {
+	background-size: 140% auto;
 }
 
 .homepage_content .section_box h4 {
 	margin: 10px;
 	padding-left: 5px;
 	padding-right: 5px;
-	background-color: rgba(255, 255, 255, 0.548);
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 .homepage_content .section_box h5 {
@@ -298,7 +317,7 @@ body {
 
 	margin-top: -80px;
 
-	background-color: rgba(255, 255, 255, 0.548);
+	background-color: rgba(255, 255, 255, 0.7);
 	padding-left: 5px;
 	padding-right: 5px;
 	
@@ -325,13 +344,20 @@ body {
 .homepage_content .wide_picture {
 	grid-area: wide_picture;
 
-	width: 100%;
-
-	background: url(../images/homepage/Colorised-Transport-Unit_medium.png) top center no-repeat;
+	background: url(../images/homepage/pumper.png) top center no-repeat;
 	background-size: 100% auto;
 
 	margin-top: 50px;
+	margin-left: 5%;
+	margin-right: 5%;
 	/*margin-bottom: 50px;*/
+}
+
+.homepage_content #latest {
+	grid-area: latest;
+
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .homepage_content .wide_picture h1 {
@@ -387,8 +413,11 @@ body {
 			"box_grid box_grid box_grid box_grid"
 			"wide_picture wide_picture wide_picture wide_picture"
 			"wide_picture_description wide_picture_description wide_picture_description wide_picture_description"
+			"tube_trailer tube_trailer tube_trailer tube_trailer"
+			"tubes_desc tubes_desc tubes_desc tubes_desc"
 			"experience_heading experience_heading experience_heading experience_heading"
 			"experience_description experience_description experience_description experience_description"
+			"latest latest latest latest"
 			"contact_area contact_area contact_area contact_area";
 	}
 

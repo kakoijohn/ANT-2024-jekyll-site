@@ -72,7 +72,7 @@
 			<div class="block1">
 				<h5>Service 002: Hydrostatic Testing</h5>
 			</div>
-			<div class="block2" style="background: url(assets/images/homepage/de-watering_small.jpg) top center no-repeat;">
+			<div class="block2" style="background: url(assets/images/feed/categories/pumping.jpg) top center no-repeat;">
 			</div>
 			<div class="block3">
 				<h1>Hydrostatic Testing</h1>
@@ -84,7 +84,7 @@
 			<div class="block1">
 				<h5>Service 003: Nitrogen Testing</h5>
 			</div>
-			<div class="block2" style="background: url(assets/images/homepage/well_stimulation_small.jpg) top center no-repeat;">
+			<div class="block2" style="background: url(assets/images/feed/nitrogen_testing.jpg) top center no-repeat;">
 			</div>
 			<div class="block3">
 				<h1>Nitrogen Testing</h1>
@@ -141,7 +141,21 @@
 		
 		<h2>Defelsko Dew Point Meter</h2>
 		<p>Once the system has been tested and all of the medium taken out, all of the moisture present in the system must be taken out so that live product may be put in. To measure the moisture levels in a pipe, we use the dew point meter which can measure down to -100°F relative humidity.</p>
+		
+		<div class="content">
+			<div id="content" style="margin-left: 0; margin-right: 0;">
+				<h1>Find out more of our testing services</h1>
+				<ul>
+					{% for feed in site.feed limit:20 %}
+						{% if feed.id != page.id and (page.category == null or page.category == "" or feed.id contains page.category) %}
+							<li><a href="{{ feed.id }}">{{ feed.title }}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
 	</div>
+
 
 	{% include components/contact_form.html %}
     {% include components/footer.html %}

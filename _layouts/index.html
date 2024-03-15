@@ -35,45 +35,63 @@
 
 		<div class="section_heading" id="nitserv_heading">
 			<h5>Industrial Liquid Nitrogen for hire</h5>
-			<h1>Nitrogen Services</h1>
+			<h1>Testing and Services</h1>
 		</div>
 		<div class="section_picture" id="nitserv_picture"></div>
 
 		<div class="box_grid">
-			<a href="html/services#pressure_testing" class="section_box" id="nitserv_box1">
+			<a href="testing" class="section_box" id="nitserv_box1">
 				<h5>Service 001</h5>
-				<h4>Pressure Testing</h4>
+				<h4>Nitrogen Testing</h4>
 			</a>
-			<a href="html/services#pigging" class="section_box" id="nitserv_box2">
+			<a href="testing" class="section_box" id="nitserv_box2">
 				<h5>Service 002</h5>
+				<h4>Hydrostatic Testing</h4>
+			</a>
+			<a href="services" class="section_box" id="nitserv_box3">
+				<h5>Service 003</h5>
 				<h4>Pigging</h4>
 			</a>
-			<a href="html/services#drying" class="section_box" id="nitserv_box3">
-				<h5>Service 003</h5>
-				<h4>Drying / Purging / Packing</h4>
-			</a>
-			<a href="html/services#well_stimulation" class="section_box" id="nitserv_box4">
+			<a href="services" class="section_box" id="nitserv_box4">
 				<h5>Service 004</h5>
-				<h4>Well Stimulation</h4>
+				<h4>Drying / Packing / Purging</h4>
 			</a>
-			<a href="html/services#pipe_maintenance" class="section_box" id="nitserv_box5">
+			<a href="services" class="section_box" id="nitserv_box5">
 				<h5>Service 005</h5>
 				<h4>Pipeline Maintenance</h4>
 			</a>
-			<a href="html/services" class="section_box" id="nitserv_box6">
+			<a href="feed" class="section_box" id="nitserv_box6">
 				<h5>Service XXX</h5>
 				<h4>See more applications</h4>
 			</a>
 		</div>
 
 		<div class="wide_picture">
-			<img src="assets/images/homepage/Colorised-Transport-Unit_medium.png" 
+			<img src="assets/images/homepage/pumper.png" 
 			height="auto" width="100%" style="visibility: hidden;">
-			<h1>Equipment</h1>
+			<h1>Cryogenic Nitrogen Pumping</h1>
 		</div>
 		<div class="wide_picture_description">
 			<h3>Atlantic Nitrogen Pumping Services provides cost-effective nitrogen for any size job small or large. Our 740K pump trucks can be taken to the most remote locations in the US. Our expert drivers and operators, provide safe reliable services to you the customer.</h3>
-			<h4 class="continue_reading"><a href="#">Find out more...</a></h4>
+			<h4 class="continue_reading"><a href="services">Find out more...</a></h4>
+		</div>
+
+		<div class="feed_heading" id="tube_trailer">
+			<img src="assets/images/feed/tube_trailer.jpg">
+			
+			<h5>Nitrogen Delivery Services</h5>
+			<h1>Nitrogen Tube Trailer Rental</h1>
+		</div>
+		<div id="tubes_desc">
+			<p>Atlantic Nitrogen has tube trailers available for rental in a variety of sizes. Ranging from 21,000 cubic feet to 81,000 cubic feet, we have trailers available to fit your job.</p>
+			<p>All tube trailers come standard with:</p>
+			<ul>
+				<li>150 feet of hoses with NPT (National Pipe Thread) connection</li>
+				<li>N<sup>2</sup> Regulator included.</li>
+				<li>DOT certified</li>
+				<li>Rental Options: Weekly or Monthly</li>
+				<li>Various sizes and volumes ranging from 21,000 ft<sup>3</sup> to 81,000 ft<sup>3</sup></li>
+			</ul>
 		</div>
 
 		<div class="section_heading" id="experience_heading">
@@ -86,6 +104,51 @@
 			<p style="font-size: larger;">Atlantic Nitrogen Pumping Services is the industry leader when it comes to <strong>up-to-date equipment, expert operators, and safety compliance</strong>. We act in accordance with all industry standards and go above and beyond when it comes to safety. Atlantic understands the inherent dangers present in compressed nitrogen and working in the oil field, so we take every precaution necessary to mitigate risk.</p>
 			<p style="font-size: larger;">With trusted expertise since 2011, we've been reliably delivering top-notch solutions tailored to our clients' needs, ensuring their peace of mind and project success. Our track record speaks volumes, showcasing our unwavering commitment to excellence and customer satisfaction over the years.</p>
 		</div>
+
+		<div id="latest">
+			<h1 style="color:var(--primary-color)">Latest news and from Atlantic Nitrogen and the industry</h1>
+			<div>
+				{% for feed in site.feed limit:3 %}
+					<div class="three_block_heading" id="{{ feed.id }}">
+						<div class="block1">
+							<h5>Topic {{ forloop.index }} : {{ feed.id }}</h5>
+						</div>
+						{% if feed.image != null and feed.image != "" %}
+							<div class="block2" style="background: url('/assets/images/feed/{{ feed.image }}') top center no-repeat;">
+							</div>
+						{% else %}
+							{% if feed.category == "" or feed.category == null %}    
+								<div class="block2" style="background: url(/assets/images/about/about_page_splash.jpg) top center no-repeat;">
+								</div>    
+							{% else %}
+								<div class="block2" style="background: url('/assets/images/feed/categories/{{ feed.category }}.jpg') top center no-repeat;">
+								</div>    
+							{% endif %}
+						{% endif %}
+						<div class="block3">
+							<h1><a href="{{ feed.id }}">{{ feed.title }}</a></h1>
+							<h3><a href="{{ feed.id }}">Learn More 🡒</a></h3>
+							<div class="block3_content">
+								<p>{{ feed.content }}</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			<h2 style="background-color:var(--secondary-color); text-align: right;"><a href="feed" style="color:white;margin: 10px">Keep up with the latest in the oil and gas industry 🡒</a></h2>
+			<div class="content">
+				<div id="content" style="margin-left: 0; margin-right: 0;">
+					<ul>
+						{% for feed in site.feed limit:20 %}
+							{% if feed.id != page.id and (page.category == null or page.category == "" or feed.id contains page.category) %}
+								<li><a href="{{ feed.id }}">{{ feed.title }}</a></li>
+							{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+
 
 		
 		{% include components/contact_form.html %}

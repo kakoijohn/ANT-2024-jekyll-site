@@ -51,7 +51,7 @@
 			<div class="block1">
 				<h5>Service 002: Pigging</h5>
 			</div>
-			<div class="block2" style="background: url(assets/images/homepage/pigging_small.jpg) top center no-repeat;">
+			<div class="block2" style="background: url(assets/images/feed/Pigs.jpg) top center no-repeat;">
 			</div>
 			<div class="block3">
 				<h1>Pigging</h1>
@@ -63,7 +63,7 @@
 			<div class="block1">
 				<h5>Service 003: Drying / Purging / Packing</h5>
 			</div>
-			<div class="block2" style="background: url(assets/images/homepage/de-watering_small.jpg) top center no-repeat;">
+			<div class="block2" style="background: url(assets/images/feed/purging.jpg) top center no-repeat;">
 			</div>
 			<div class="block3">
 				<h1>Drying / Purging / Packing</h1>
@@ -75,7 +75,7 @@
 			<div class="block1">
 				<h5>Service 004: Jetting</h5>
 			</div>
-			<div class="block2" style="background: url(assets/images/homepage/well_stimulation_small.jpg) top center no-repeat;">
+			<div class="block2" style="background: url(assets/images/feed/jetting.jpg) top center no-repeat;">
 			</div>
 			<div class="block3">
 				<h1>Jetting</h1>
@@ -87,12 +87,25 @@
 			<div class="block1">
 				<h5>Service 005: Pipeline Maintenance</h5>
 			</div>
-			<div class="block2" style="background: url(assets/images/homepage/pipeline_maintenance_small.jpg) top center no-repeat;">
+			<div class="block2" style="background: url(assets/images/feed/maintenance.jpg) top center no-repeat;">
 			</div>
 			<div class="block3">
 				<h1>Pipeline Maintenance</h1>
 				<p>
 					Pumping plays a crucial role in pipeline maintenance, offering efficient solutions for various tasks aimed at ensuring the integrity and longevity of the infrastructure. From removing debris and sediment buildup through pigging operations to conducting hydrostatic testing to assess structural integrity, pumping facilitates thorough and precise maintenance procedures. Moreover, pumping enables the introduction of protective coatings and corrosion inhibitors into the pipeline, mitigating the risk of deterioration and extending its lifespan. By employing advanced pumping technologies and techniques, pipeline maintenance becomes not only more effective but also less disruptive, minimizing downtime and optimizing the overall reliability of the system.</p>
+			</div>
+		</div>
+
+		<div class="content">
+			<div id="content" style="margin-left: 0; margin-right: 0;">
+				<h1>Find out more of our pumping services</h1>
+				<ul>
+					{% for feed in site.feed limit:20 %}
+						{% if feed.id != page.id and (page.category == null or page.category == "" or feed.id contains page.category) %}
+							<li><a href="{{ feed.id }}">{{ feed.title }}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
 			</div>
 		</div>
 	</div>

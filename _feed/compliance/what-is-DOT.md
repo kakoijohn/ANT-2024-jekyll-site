@@ -1,5 +1,5 @@
 ---
-title: What is DOT?
+title: DOT Compliance and industry standards
 layout: feed_post
 category: compliance
 ---
