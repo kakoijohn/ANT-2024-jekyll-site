@@ -21,7 +21,6 @@
 
 	width: 100%;
 	height: 50vh;
-	max-height: 50vh;
 
 	display: grid;
 
@@ -140,7 +139,7 @@
 
 @media screen and (max-width: 992px) and (orientation:portrait) {
 	.three_block_heading {
-		height: 70vh;
+		height: 100vh;
 
 		grid-template-columns: 1fr;
 
@@ -197,7 +196,7 @@
 
 @media screen and (max-width: 992px) and (orientation:landscape) {
 	.three_block_heading {
-		height: 80vh;
+		height: 150vh;
 	}
 
 	.block3 p {
