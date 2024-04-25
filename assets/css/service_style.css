@@ -182,6 +182,17 @@
 	.block3 p {
 		margin-right: 20%;
 	}
+
+	.block3 h1 {
+		position: absolute;
+		margin: 0;
+		bottom: 53px;
+		right: 10px;
+		color: var(--primary-color);
+		text-align: right;
+		background-color: white;
+		z-index: 10;
+	}
 }
 
 @media screen and (max-width: 992px) and (orientation:landscape) {
@@ -191,5 +202,17 @@
 
 	.block3 p {
 		font-size: 17pt;
+	}
+
+	.block1 h5 {
+		position: absolute;
+		white-space: nowrap;
+		margin: 0;
+		bottom: 0;
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		transform-origin: 0% 0%;
+
+		font-size: small;
 	}
 }

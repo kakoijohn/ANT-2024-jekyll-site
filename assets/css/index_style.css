@@ -81,6 +81,19 @@ body {
 		background-size: 200px 200px;
 		height: 103%;
 	}
+
+	.homepage_splash_screen .splash_screen_heading .logo img {
+		width: 300px;
+		margin-bottom: 25px;
+	}
+	
+
+	.homepage_splash_screen .splash_screen_heading .logo h1 {
+		margin: 0;
+		background: rgba(129, 206, 245, 0.877);
+
+		font-size: 40pt;
+	}
 }
 
 .homepage_content {

@@ -142,6 +142,15 @@ li {
 	transition: ease-in 0.5s all;
 }
 
+.logo_white {
+	grid-area: logo;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	background: url(../images/logo/ANT_Vector_logo_white.svg) left center no-repeat;
+}
+
 .main_menu .logo--inactive {
 	opacity: 0;
 }
@@ -509,14 +518,11 @@ li {
 	}
 
 	.full_context_menu {
-		grid-template-rows: 0.5fr 0.3fr 1fr 1fr 1fr 1fr 0.5fr;
+		grid-template-rows: 1fr 0.3fr 1fr 1fr;
 		grid-template-areas: 
 			". logo logo logo exit_menu ."
 			". context_text context_text context_text context_text ."
-			". sub_menu1 sub_menu1 sub_menu1 sub_menu1 ."
-			". sub_menu2 sub_menu2 sub_menu2 sub_menu2 ."
-			". sub_menu3 sub_menu3 sub_menu3 sub_menu3 ."
-			". sub_menu4 sub_menu4 sub_menu4 sub_menu4 ."
+			". sub_menu1 sub_menu2 sub_menu3 sub_menu4 ."
 			". footer footer footer footer .";
 	}
 
