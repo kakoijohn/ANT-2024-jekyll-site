@@ -274,8 +274,6 @@ body {
 	grid-area: nitserv_box1;
 	background: url(../images/homepage/pressure_testing_hover_icon_active.jpg) top center no-repeat;
 	background-size: 120% auto;
-	
-	margin-left: 0;
 }
 
 .homepage_content #nitserv_box2 {
