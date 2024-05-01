@@ -8,7 +8,7 @@
 .service_page_content p {
 	background-color: white;
 
-	font-size: larger;
+	/* font-size: larger; */
 }
 
 .service_page_content h1, 
@@ -158,7 +158,7 @@
 	.block1 h5 {
 		margin-left: 5px;
 
-		font-size: 20pt;
+		/* font-size: 20pt; */
 
 	    -webkit-transform: rotate(0deg);
 	    transform: rotate(0deg);
@@ -199,9 +199,9 @@
 		height: 150vh;
 	}
 
-	.block3 p {
+	/* .block3 p {
 		font-size: 17pt;
-	}
+	} */
 
 	.block1 h5 {
 		position: absolute;
@@ -212,6 +212,6 @@
 		transform: rotate(-90deg);
 		transform-origin: 0% 0%;
 
-		font-size: small;
+		/* font-size: small; */
 	}
 }

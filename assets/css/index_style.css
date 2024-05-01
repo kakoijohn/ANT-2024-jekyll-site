@@ -91,7 +91,7 @@ body {
 		margin: 0;
 		background: rgba(129, 206, 245, 0.877);
 
-		font-size: 40pt;
+		/* font-size: 40pt; */
 	}
 }
 
@@ -165,9 +165,9 @@ body {
 	color: var(--primary-color);
 }
 
-.homepage_content #tubes_desc p {
+/* .homepage_content #tubes_desc p {
 	font-size: larger;
-}
+} */
 
 .homepage_content .content_description p {
 	background-color: #ffffffad;

@@ -24,9 +24,9 @@
 		"contact_area contact_area contact_area contact_area";
 }
 
-.content p {
+/* .content p {
 	font-size: larger;
-}
+} */
 
 .content h3 {
     color: var(--primary-color);

@@ -9,7 +9,7 @@
 
 .section_sub p {
 	margin: 15px;
-	font-size: larger;
+	/* font-size: larger; */
 }
  
 #the_crew_heading {
@@ -42,9 +42,7 @@
 	grid-area: employee_1_sub;
 }
 
-#employee_1:hover {
-	
-}
+/* #employee_1:hover {} */
 
 #employee_2 {
 	grid-area: employee_2;
@@ -57,9 +55,7 @@
 	grid-area: employee_2_sub;
 }
 
-#employee_2:hover {
-	
-}
+/* #employee_2:hover {} */
 
 #employee_3 {
 	grid-area: employee_3;
@@ -72,9 +68,7 @@
 	grid-area: employee_3_sub;
 }
 
-#employee_3:hover {
-	
-}
+/* #employee_3:hover {} */
 
 #pipeline_pic {
 	grid-area: pipeline_pic;

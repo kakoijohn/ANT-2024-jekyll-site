@@ -100,12 +100,12 @@
 }
 
 @media screen and (orientation:landscape) and (max-width: 992px) {
-	h3 {
+	/* h3 {
 		font-size: 18pt;
 	}
 	p {
 		font-size: 15pt;
-	}
+	} */
 
 	#google_maps {
 		height: 140vh;

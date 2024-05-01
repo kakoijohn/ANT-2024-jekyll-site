@@ -181,18 +181,18 @@ html, body {
 		border-right: none;
 	}
 
-	.request_a_quote #title h1 {
+	/* .request_a_quote #title h1 {
 		font-size: 35pt;
-	}
+	} */
 
 	.request_a_quote #description {
 		border-bottom: none;
 		border-right: none;
 	}
 
-	.request_a_quote #description p {
+	/* .request_a_quote #description p {
 		font-size: 20pt;
-	}
+	} */
 }
 
 @media screen and (max-width: 992px) and (orientation:landscape) {
