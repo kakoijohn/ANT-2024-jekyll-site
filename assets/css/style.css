@@ -16,6 +16,10 @@ body {
 	padding: 0;
 }
 
+p {
+	font-size: 15pt;
+}
+
 h1 {
 	color: white;
 	text-transform: uppercase;
@@ -273,8 +277,8 @@ li {
 	margin-top: 5%;
 }
 
-.full_context_menu .sub_menu {
-}
+/* .full_context_menu .sub_menu {
+} */
 
 .full_context_menu #sub_menu1 {
 	grid-area: sub_menu1;

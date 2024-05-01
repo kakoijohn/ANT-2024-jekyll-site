@@ -58,7 +58,7 @@
                 {% if page.category == "" or page.category == null %}
                     <h3>Related topics</h3>
                 {% else %}
-                    <h3>Related topics to {{ page.category }}</h3>
+                    <h3>Topics related to {{ page.category }}</h3>
                 {% endif %}
                 <ul>
                     {% for feed in site.feed limit:20 %}
