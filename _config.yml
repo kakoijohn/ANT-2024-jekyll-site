@@ -22,11 +22,10 @@ title: Atlantic Nitrogen
 email: contact@atlanticnitrogen.com 
 description: >- # this means to ignore newlines until "baseurl:"
   Atlantic Nitrogen is creating a safer future for America. 
-  We are a multi-service company capable of performing various tasks regarding the oil and gas industry working with the construction, operation, and maintenance of pipelines. 
+  We are a multi-service company capable of performing various tasks regarding the energy industry working with the construction, operation, and maintenance of pipelines. 
   We can serve you at what ever job site at any time as we are on call 24/7. 
   Atlantic has the capabilities of going to every job site to satisfy your specific needs.
-  Based in Washington, PA we mainly serve the Tri-State area including Pennsylvania, Ohio, and West Virginia. 
-  We also have units all around North America, from Canada to Texas that can service your needs.
+  Based in Washington, PA we are stategically positioned to serve the North American energy industry. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://atlanticnitrogen.com # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
