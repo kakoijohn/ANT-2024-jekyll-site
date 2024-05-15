@@ -18,7 +18,7 @@ html, body {
 		". title email phone ."
 		". description comment comment ."
 		". description comment comment ."
-		". description . submit ."
+		". description captcha submit ."
 		". . . . .";
 
 	background-color: #edd023;
@@ -130,6 +130,17 @@ html, body {
 	border-right: none;
 }
 
+.request_a_quote #captcha {
+	grid-area: captcha;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.g-recaptcha {
+	padding: 10px;
+}
+
 .request_a_quote #submit {
 	grid-area: submit;
 	border-top: none;
@@ -168,7 +179,7 @@ html, body {
 			". email email phone ."
 			". comment comment comment ."
 			". comment comment comment ."
-			". . . submit ."
+			". captcha . submit ."
 			". . . . .";
 	}
 
@@ -188,6 +199,10 @@ html, body {
 	.request_a_quote #description {
 		border-bottom: none;
 		border-right: none;
+	}
+
+	.request_a_quote #captcha {
+		border-bottom: none;
 	}
 
 	/* .request_a_quote #description p {
